@@ -32,10 +32,9 @@ function getAgesByCentury(obj) {
 
 function averageAges() {
   getAgesByCentury(ancestry);
-  console.log(agesObject);
-  agesObject.forEach(function(century) {
+  for (var century in agesObject) {
     console.log(century, ": ", average(agesObject[century]));
-  })
+  }
 }
 
 averageAges();
